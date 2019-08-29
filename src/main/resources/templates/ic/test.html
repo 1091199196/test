@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="user">
+
+</div>
+</body>
+<script type="application/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="application/javascript">
+    $.ajax({
+        url: "index",
+        type: "get",
+        data: {},
+        dataType: 'json',
+        success: function (data) {
+            //alert(data);
+            $(".user").append("<table><tr><td>" + data.birthday + "</td><br/>");
+            $(".user").append("<tr><td>" + data.userName + "</td><br/>");
+            $(".user").append("<tr><td>" + data.userAge + "</td><br/></table>");
+
+        }
+    })
+</script>
+</html>
